@@ -64,6 +64,121 @@ const HomePage = ({ appName }) => {
                     </span>
                   </Link>
                 </li>
+                <li>
+                  <Link
+                    className={`flex items-center rounded-lg p-2 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 ${appName === 'mintbase.near' || appName === undefined
+                      ? 'bg-gray-700'
+                      : ''
+                      }`}
+                    to={routes.app({ appName: 'mintbase.near' })}
+                  >
+                    <img
+                      className="h-6 w-6 rounded-full"
+                      src="https://paras-cdn.imgix.net/bafkreigynjl2dymbl42lm746rfy3gejgpo6xddcqaa75jku4u42ifig2wa?w=800&auto=format,compress"
+                      alt="secret skellies society"
+                    />
+                    <span
+                      className={`ml-3 flex-1 whitespace-nowrap hover:text-white ${appName === 'mintbase.near' || appName === undefined
+                        ? 'text-white'
+                        : 'text-stone-900 '
+                        }`}
+                    >
+                      Secret Skellies Society
+                    </span>
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className={`flex items-center rounded-lg p-2 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 ${appName === 'mintbase.near' || appName === undefined
+                      ? 'bg-gray-700'
+                      : ''
+                      }`}
+                    to={routes.app({ appName: 'mintbase.near' })}
+                  >
+                    <img
+                      className="h-6 w-6 rounded-full"
+                      src="https://paras-cdn.imgix.net/bafkreibql42tly53kang244kjdaqityi246w37qubgujxeeuloma7lbx6u?w=200&auto=format,compress"
+                      alt="nearton nft"
+                    />
+                    <span
+                      className={`ml-3 flex-1 whitespace-nowrap hover:text-white ${appName === 'mintbase.near' || appName === undefined
+                        ? 'text-white'
+                        : 'text-stone-900 '
+                        }`}
+                    >
+                      NEARton
+                    </span>
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className={`flex items-center rounded-lg p-2 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 ${appName === 'mintbase.near' || appName === undefined
+                      ? 'bg-gray-700'
+                      : ''
+                      }`}
+                    to={routes.app({ appName: 'mintbase.near' })}
+                  >
+                    <img
+                      className="h-6 w-6 rounded-full"
+                      src="https://paras-cdn.imgix.net/bafkreidixsebqzucoj3sbwpt3xnogteirtqwhkifzflc72oy5qtkk3rgku?w=200&auto=format,compress"
+                      alt="near tinker union"
+                    />
+                    <span
+                      className={`ml-3 flex-1 whitespace-nowrap hover:text-white ${appName === 'mintbase.near' || appName === undefined
+                        ? 'text-white'
+                        : 'text-stone-900 '
+                        }`}
+                    >
+                      Near Tinker Union
+                    </span>
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className={`flex items-center rounded-lg p-2 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 ${appName === 'mintbase.near' || appName === undefined
+                      ? 'bg-gray-700'
+                      : ''
+                      }`}
+                    to={routes.app({ appName: 'mintbase.near' })}
+                  >
+                    <img
+                      className="h-6 w-6 rounded-full"
+                      src="https://paras-cdn.imgix.net/bafkreie4ohxbaz4ocr6eddrfmfivfb3d67uymefuy4ubuh2qijodtrpgee?w=200&auto=format,compress"
+                      alt="nearnauts"
+                    />
+                    <span
+                      className={`ml-3 flex-1 whitespace-nowrap hover:text-white ${appName === 'mintbase.near' || appName === undefined
+                        ? 'text-white'
+                        : 'text-stone-900 '
+                        }`}
+                    >
+                      NEARNauts
+                    </span>
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className={`flex items-center rounded-lg p-2 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 ${appName === 'mintbase.near' || appName === undefined
+                      ? 'bg-gray-700'
+                      : ''
+                      }`}
+                    to={routes.app({ appName: 'mintbase.near' })}
+                  >
+                    <img
+                      className="h-6 w-6 rounded-full"
+                      src="https://paras-cdn.imgix.net/bafkreia7dh2h2na6illth2ekzjntujw6npxfyhisxzjkanzog5wqfeicqy?w=200&auto=format,compress"
+                      alt="battle boars gen 0"
+                    />
+                    <span
+                      className={`ml-3 flex-1 whitespace-nowrap hover:text-white ${appName === 'mintbase.near' || appName === undefined
+                        ? 'text-white'
+                        : 'text-stone-900 '
+                        }`}
+                    >
+                      Battle Boars Gen 0
+                    </span>
+                  </Link>
+                </li>
               </ul>
             </div>
           </aside>

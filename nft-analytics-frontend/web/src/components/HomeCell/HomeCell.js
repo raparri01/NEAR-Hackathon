@@ -4,7 +4,7 @@ import ClimbingBoxLoader from 'react-spinners/ClimbingBoxLoader'
 
 import { APPS } from 'src/constants'
 
-import { averagePriceMockData, averagePriceMockData2, uniqueBuyersMockData, uniqueBuyersMockData2, volatilityMockData, volatilityMockData2, volumeMockData, volumeMockData2 } from './MockData'
+import { averagePriceMockData, averagePriceMockData2, averagePriceMockData3, averagePriceMockData4, averagePriceMockData5, averagePriceMockData6, averagePriceMockData7, uniqueBuyersMockData, uniqueBuyersMockData2, uniqueBuyersMockData3, uniqueBuyersMockData4, uniqueBuyersMockData5, uniqueBuyersMockData6, uniqueBuyersMockData7, volatilityMockData, volatilityMockData2, volatilityMockData3, volatilityMockData4, volatilityMockData5, volatilityMockData6, volatilityMockData7, volumeMockData, volumeMockData2, volumeMockData3, volumeMockData4, volumeMockData5, volumeMockData6, volumeMockData7 } from './MockData'
 
 export const QUERY = gql`
   query HomeQuery($appName: String!) {
@@ -42,10 +42,20 @@ export const Failure = () => (
 export const Success = (data) => {
   const [chartData, setChartData] = useState([])
   const [chartData2, setChartData2] = useState([])
+  const [chartData3, setChartData3] = useState([])
+  const [chartData4, setChartData4] = useState([])
+  const [chartData5, setChartData5] = useState([])
+  const [chartData6, setChartData6] = useState([])
+  const [chartData7, setChartData7] = useState([])
   const [selectedMetric, setSelectedMetric] = useState('averagePrice')
   useEffect(() => {
     setChartData(AvailableMetrics[selectedMetric])
     setChartData2(AvailableMetrics[selectedMetric + '2'])
+    setChartData3(AvailableMetrics[selectedMetric + '3'])
+    setChartData4(AvailableMetrics[selectedMetric + '4'])
+    setChartData5(AvailableMetrics[selectedMetric + '5'])
+    setChartData6(AvailableMetrics[selectedMetric + '6'])
+    setChartData7(AvailableMetrics[selectedMetric + '7'])
     window.Highcharts.chart('container', {
       title: {
         text: 'Average Price',
@@ -92,6 +102,26 @@ export const Success = (data) => {
           name: 'Antisocial Ape Club',
           data: chartData2.map((x) => x.value) || [],
         },
+        {
+          name: 'Secret Skellies Society',
+          data: chartData3.map((x) => x.value) || [],
+        },
+        {
+          name: 'NEARton',
+          data: chartData4.map((x) => x.value) || [],
+        },
+        {
+          name: 'Near Tinker Union',
+          data: chartData5.map((x) => x.value) || [],
+        },
+        {
+          name: 'NEARNauts',
+          data: chartData6.map((x) => x.value) || [],
+        },
+        {
+          name: 'Battle Boars Gen 0',
+          data: chartData7.map((x) => x.value) || [],
+        },
       ],
 
       responsive: {
@@ -116,12 +146,32 @@ export const Success = (data) => {
   const AvailableMetrics = {
     averagePrice: averagePriceMockData,
     averagePrice2: averagePriceMockData2,
+    averagePrice3: averagePriceMockData3,
+    averagePrice4: averagePriceMockData4,
+    averagePrice5: averagePriceMockData5,
+    averagePrice6: averagePriceMockData6,
+    averagePrice7: averagePriceMockData7,
     volatility: volatilityMockData,
     volatility2: volatilityMockData2,
+    volatility3: volatilityMockData3,
+    volatility4: volatilityMockData4,
+    volatility5: volatilityMockData5,
+    volatility6: volatilityMockData6,
+    volatility7: volatilityMockData7,
     volume: volumeMockData,
     volume2: volumeMockData2,
+    volume3: volumeMockData3,
+    volume4: volumeMockData4,
+    volume5: volumeMockData5,
+    volume6: volumeMockData6,
+    volume7: volumeMockData7,
     uniqueBuyers: uniqueBuyersMockData,
-    uniqueBuyers2: uniqueBuyersMockData2
+    uniqueBuyers2: uniqueBuyersMockData2,
+    uniqueBuyers3: uniqueBuyersMockData3,
+    uniqueBuyers4: uniqueBuyersMockData4,
+    uniqueBuyers5: uniqueBuyersMockData5,
+    uniqueBuyers6: uniqueBuyersMockData6,
+    uniqueBuyers7: uniqueBuyersMockData7,
 
   }
 
@@ -141,9 +191,6 @@ export const Success = (data) => {
             1.59% ↗️{' '}
           </span>
         </div>
-        <div className="flex items-center">
-          <p className="text-4xl">Freaky Elves by Spin</p>
-        </div>
       </div>
       {/* End Topbar */}
       {/* Start Graph Options */}
@@ -161,10 +208,10 @@ export const Success = (data) => {
           <button className="mr-2 rounded bg-gray-100 px-2 py-1 text-sm text-gray-500">
             24H
           </button>
-          <button className="mr-2 rounded bg-blue-100 px-2 py-1 text-sm text-blue-500">
+          <button className="mr-2 rounded bg-gray-100 px-2 py-1 text-sm text-gray-500">
             7D
           </button>
-          <button className="mr-2 rounded bg-gray-100 px-2 py-1 text-sm text-gray-500">
+          <button className="mr-2 rounded bg-blue-100 px-2 py-1 text-sm text-blue-500">
             1Y
           </button>
           <button className="mr-2 rounded bg-gray-100 px-2 py-1 text-sm text-gray-500">
