@@ -1,4 +1,4 @@
-# README
+# How to get started with One Labs
 
 To self-host the One Labs at your local machine, please follow below direction: 
 
