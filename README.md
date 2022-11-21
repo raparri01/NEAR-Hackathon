@@ -32,7 +32,7 @@ One Labs is a NFT analytics platform provides data analytics tool, data visualiz
 3. Data architect design
 
 ## Accomplishments that we're proud of
-We are relatively new to web3, so we are happy that we have kicked off and deployed the bluchip NFT index for NEAR that can continue to be built up, either by ourselves or others, to better understand The Graph and the NEAR NFT ecosystem. By selecting the top NFT projects existing across the multiple NFT marketplaces on NEAR chain and showing the true trends, we introduced what's really happening in the NEAR NFT ecosystem at glance not only to the existing NEAR community memebers, but also to the potential and new NEAR users. 
+We are relatively new to web3, so we are happy that we have kicked off and deployed the bluchip NFT index for NEAR that can continue to be built up, either by ourselves or others, to better understand The Graph and the NEAR NFT ecosystem. By selecting the top NFT projects existing across the multiple NFT marketplaces on NEAR chain and showing the true trends, we introduced what's really happening in the NEAR NFT ecosystem at glance not only to the existing NEAR community members, but also to the potential and new NEAR users. 
 
 ## What we learned
 We learned the basics of all the pieces of this puzzle. We also got some insights into the wide variety of NFT projects on NEAR. As well as how to build the tech stack around NEAR NFT protocols.
