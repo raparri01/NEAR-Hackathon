@@ -1,0 +1,14 @@
+.navbar {
+  height: 5vmax;
+  width: 100vw;
+  background-color: #ffde5c;
+}
+.logoImg {
+  height: 4vmax;
+  width: 4vmax;
+}
+.logoFont {
+  font-family: 'Fuzzy Bubbles', cursive;
+  /* font-family: 'Quicksand', sans-serif; */
+  font-size: 2.7vmax;
+}

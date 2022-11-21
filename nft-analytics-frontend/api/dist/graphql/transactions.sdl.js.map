@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../src/graphql/transactions.sdl.js"],
+  "sourcesContent": ["export const schema = gql`\n  type PriceTimeStamp {\n    value: Float!\n    timestamp: String!\n  }\n  type Transaction {\n    price: [PriceTimeStamp!]\n    transactions: [PriceTimeStamp!]\n  }\n\n  type Query {\n    transactionsForApp(appName: String): Transaction! @skipAuth\n  }\n`\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;;;;yBAAyB;AAAlB,MAAMA,SAASC,mBAAAA;;;;;;;;;;;;;;",
+  "names": ["schema", "gql"]
+}

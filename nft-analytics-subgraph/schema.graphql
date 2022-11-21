@@ -1,0 +1,70 @@
+type Account @entity {
+  id: ID!
+  nftTotal: Int
+  nftTransfers: Int
+}
+
+type UnhandledAction @entity {
+  id: ID!
+  method: String
+  kind: String
+  log: String
+}
+
+type Collection @entity {
+  id: ID!
+  name: String!
+}
+type Buy @entity {
+  id: ID!
+  buyer: String
+  price: String
+  log: String
+  timestamp: BigInt
+  nft: String
+}
+type Transfer @entity {
+  receiver: String
+  sender: String
+  id: ID!
+  data: String
+  timestamp: BigInt
+}
+type NFT @entity {
+  id: ID!
+  lastSalePrice: Int
+}
+type SetSeriesPrice @entity {
+  id: ID!
+  data: String
+}
+type NftVolumeDayData @entity {
+  id: ID!
+  date: BigInt
+  volume: BigInt
+  averagePrice: BigInt
+  totalActionCount: BigInt
+  collection: BigInt
+}
+type NftVolumeHourData @entity {
+  id: ID!
+  date: BigInt
+  volume: BigInt
+  totalActionCount: BigInt
+  averagePrice: BigInt
+  collection: BigInt
+}
+type CollectionVolumeDayData @entity {
+  id: ID!
+  date: BigInt
+  volume: BigInt
+  totalActionCount: BigInt
+  averagePrice: BigInt
+}
+type CollectionVolumeHourData @entity {
+  id: ID!
+  date: BigInt
+  volume: BigInt
+  totalActionCount: BigInt
+  averagePrice: BigInt
+}

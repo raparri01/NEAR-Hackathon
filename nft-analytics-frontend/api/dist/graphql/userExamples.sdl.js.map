@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../src/graphql/userExamples.sdl.js"],
+  "sourcesContent": ["export const schema = gql`\n  type UserExample {\n    id: Int!\n    name: String\n    email: String\n  }\n\n  type Query {\n    userExamples: [UserExample!]! @skipAuth\n    userExample(id: Int!): UserExample @skipAuth\n  }\n`\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;;;;yBAAyB;AAAlB,MAAMA,SAASC,mBAAAA;;;;;;;;;;;;",
+  "names": ["schema", "gql"]
+}

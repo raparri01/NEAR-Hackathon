@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/services/userExamples/userExamples.js"],
+  "sourcesContent": ["const tempUsers = [\n  { id: 1, name: 'priyank', email: 'pulumati.priyank@gmail.com' },\n  { id: 2, name: 'developer', email: 'developer.priyank@gmail.com' },\n]\n\nexport const userExamples = () => {\n  return tempUsers\n}\n\nexport const userExample = ({ id }) => {\n  return tempUsers.find((user) => user.id === id) || null\n}\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAA,MAAMA,YAAY,CAChB;EAAEC,IAAI;EAAGC,MAAM;EAAWC,OAAO;AAA6B,GAC9D;EAAEF,IAAI;EAAGC,MAAM;EAAaC,OAAO;AAA8B,CAAC;AAG7D,MAAMC,eAAe,MAAM;AAChC,SAAOJ;AACT;AAEO,MAAMK,cAAc,CAAC;EAAEJ;AAAG,MAAM;AACrC,aAAO,YAAAK,SAAAN,SAAS,EAAA,KAATA,WAAgBO,UAASA,KAAKN,OAAOA,EAAE,KAAK;AACrD;",
+  "names": ["tempUsers", "id", "name", "email", "userExamples", "userExample", "_findInstanceProperty", "user"]
+}
