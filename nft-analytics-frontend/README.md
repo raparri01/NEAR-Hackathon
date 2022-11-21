@@ -7,16 +7,20 @@ To self-host the One Labs at your local machine, please follow below direction:
 > - It requires [Node.js](https://nodejs.org/en/) (>=14.19.x <=16.x) and [Yarn](https://yarnpkg.com/) (>=1.15)
 > - Are you on Windows? For best results, follow our [Windows development setup](https://redwoodjs.com/docs/how-to/windows-development-setup) guide
 
+Clone our github repo at your local machine and go to change the current working directory to `~/NEAR-Hackathon/nft-analytics-frontend`: 
+```
+git clone https://github.com/raparri01/NEAR-Hackathon.git
+cd ~/NEAR-Hackathon/nft-analytics-frontend
+```
 Start by installing dependencies:
 
 ```
 yarn install
 ```
 
-Then change into below directory and start the development server:
+Start the development server:
 
 ```
-cd NEAR-Hackathon/nft-analytics-frontend
 yarn redwood dev
 ```
 
