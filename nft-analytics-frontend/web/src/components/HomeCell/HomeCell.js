@@ -56,14 +56,20 @@ export const Success = (data) => {
     setChartData5(AvailableMetrics[selectedMetric + '5'])
     setChartData6(AvailableMetrics[selectedMetric + '6'])
     setChartData7(AvailableMetrics[selectedMetric + '7'])
+    const getChartLabel = (metric) => {
+      if (metric == 'averagePrice') return 'Price'
+      if (metric == 'volatility') return 'Volatility'
+      if (metric == 'volume') return 'Volume'
+      if (metric == 'uniqueBuyers') return 'Unique Buyers'
+    }
     window.Highcharts.chart('container', {
       title: {
-        text: 'Average Price',
+        text: `${getChartLabel(selectedMetric)} (30 Days)`,
       },
 
       yAxis: {
         title: {
-          text: 'Price',
+          text: getChartLabel(selectedMetric),
         },
       },
 
@@ -186,7 +192,7 @@ export const Success = (data) => {
       {/* Start Topbar */}
       <div className="flex justify-between py-4">
         <div className="flex items-center">
-          <p className="text-6xl">16.2 Ⓝ</p>
+          <p className="text-2xl">1Ⓝ = 1.65 USD</p>
           <span className="p-2 text-indigo-600">
             1.59% ↗️{' '}
           </span>
@@ -212,6 +218,9 @@ export const Success = (data) => {
             7D
           </button>
           <button className="mr-2 rounded bg-blue-100 px-2 py-1 text-sm text-blue-500">
+            30D
+          </button>
+          <button className="mr-2 rounded bg-gray-100 px-2 py-1 text-sm text-gray-500">
             1Y
           </button>
           <button className="mr-2 rounded bg-gray-100 px-2 py-1 text-sm text-gray-500">
