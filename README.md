@@ -18,7 +18,7 @@ There're many NFT Projects on NEAR, however
 3) No data visualization for subgraphs and intuitive analysis tools
 
 ## What it does
-One Labs provides NFT analytics, an data analytics tool for data visualization and metrics tracking for Near NFT using subgraphs. An NFT analytics platform providing important transaction signals and trends for NFT projects on NEAR would help new and existing NFT creators and collectors to choose and grow the NEAR community together. The dashboard includes top 10 NFT projects with all-time large trading volume. 
+One Labs is a NFT analytics platform provides data analytics tool, data visualization and metrics tracking NEAR NFTs using subgraphs. It reveals important transaction signals and trends for NFT projects on NEAR and helps new and existing NFT creators and collectors to choose and grow the NEAR community together. The dashboard includes top 10 NEAR NFT projects with all-time large trading volume. 
 
 ## How we built it
 1. Use the graph for data analysis on NEAR NFT.
