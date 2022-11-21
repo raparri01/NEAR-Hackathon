@@ -1,6 +1,9 @@
 # One Labs - NFT data analytics platform for NEAR community 
 
-![alt text](https://github.com/raparri01/NEAR-Hackathon/blob/main/onelabs.png?raw=true)
+
+https://user-images.githubusercontent.com/25339040/203132457-dcb65a0c-0d0d-4f44-8920-eef3efe2556f.mov
+
+
 ## Track 
 Native Track ✨
 - Teammates: Veronica Lee, Robert Aparri, Claire Xie
