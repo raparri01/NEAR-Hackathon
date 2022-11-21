@@ -1,8 +1,10 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 
 import ClimbingBoxLoader from 'react-spinners/ClimbingBoxLoader'
 
 import { APPS } from 'src/constants'
+
+import { averagePriceMockData, averagePriceMockData2, uniqueBuyersMockData, uniqueBuyersMockData2, volatilityMockData, volatilityMockData2, volumeMockData, volumeMockData2 } from './MockData'
 
 export const QUERY = gql`
   query HomeQuery($appName: String!) {
@@ -37,42 +39,16 @@ export const Failure = () => (
   </div>
 )
 
-const MockDataWeek = [
-  {
-    timestamp: '2022-11-13',
-    value: 1.1,
-  },
-  {
-    timestamp: '2022-11-14',
-    value: 1.2,
-  },
-  {
-    timestamp: '2022-11-15',
-    value: 1.164,
-  },
-  {
-    timestamp: '2022-11-16',
-    value: 1.3,
-  },
-  {
-    timestamp: '2022-11-17',
-    value: 1.5,
-  },
-  {
-    timestamp: '2022-11-18',
-    value: 1.64523,
-  },
-  {
-    timestamp: '2022-11-19',
-    value: 1.9,
-  },
-]
 export const Success = (data) => {
+  const [chartData, setChartData] = useState([])
+  const [chartData2, setChartData2] = useState([])
+  const [selectedMetric, setSelectedMetric] = useState('averagePrice')
   useEffect(() => {
-    console.log(data)
+    setChartData(AvailableMetrics[selectedMetric])
+    setChartData2(AvailableMetrics[selectedMetric + '2'])
     window.Highcharts.chart('container', {
       title: {
-        text: APPS[data.appName] + ' Price Movement',
+        text: 'Average Price',
       },
 
       yAxis: {
@@ -88,7 +64,7 @@ export const Success = (data) => {
         labels: {
           enabled: true,
           formatter: function () {
-            return MockDataWeek.map((x) => x.timestamp)[this.value]
+            return chartData.map((x) => x.timestamp)[this.value]
           },
         },
       },
@@ -109,8 +85,12 @@ export const Success = (data) => {
 
       series: [
         {
-          name: 'Price',
-          data: MockDataWeek.map((x) => x.value) || [],
+          name: 'Freaky Eleves by Spin',
+          data: chartData.map((x) => x.value) || [],
+        },
+        {
+          name: 'Antisocial Ape Club',
+          data: chartData2.map((x) => x.value) || [],
         },
       ],
 
@@ -131,15 +111,35 @@ export const Success = (data) => {
         ],
       },
     })
-  }, [data])
+  }, [chartData, selectedMetric])
+
+  const AvailableMetrics = {
+    averagePrice: averagePriceMockData,
+    averagePrice2: averagePriceMockData2,
+    volatility: volatilityMockData,
+    volatility2: volatilityMockData2,
+    volume: volumeMockData,
+    volume2: volumeMockData2,
+    uniqueBuyers: uniqueBuyersMockData,
+    uniqueBuyers2: uniqueBuyersMockData2
+
+  }
+
+  const changeMetric = (metricName) => {
+    setSelectedMetric(metricName)
+    // setChartData(AvailableMetrics[metricName])
+    // setChartData2(AvailableMetrics[metricName + '2'])
+  }
 
   return (
     <div>
       {/* Start Topbar */}
       <div className="flex justify-between py-4">
         <div className="flex items-center">
-          <p className="text-6xl">$1,000</p>
-          <span className="p-2 text-indigo-600">1.59%</span>
+          <p className="text-6xl">16.2 Ⓝ</p>
+          <span className="p-2 text-indigo-600">
+            1.59% ↗️{' '}
+          </span>
         </div>
         <div className="flex items-center">
           <p className="text-4xl">Freaky Elves by Spin</p>
@@ -149,10 +149,10 @@ export const Success = (data) => {
       {/* Start Graph Options */}
       <div className="flex justify-between">
         <div>
-          <span className="pr-5 text-indigo-500 underline">Average Price</span>
-          <span className="pr-5 text-gray-500">Volatility</span>
-          <span className="pr-5 text-gray-500">Volume</span>
-          <span className="pr-5 text-gray-500">Activity</span>
+          <span className={`pr-5 cursor-pointer ${selectedMetric === 'averagePrice' ? 'text-indigo-500 underline' : 'text-gray-500'}`} onClick={() => changeMetric('averagePrice')}>Average Price</span>
+          <span className={`pr-5 cursor-pointer ${selectedMetric === 'volatility' ? 'text-indigo-500 underline' : 'text-gray-500'}`} onClick={() => changeMetric('volatility')}>Volatility</span>
+          <span className={`pr-5 cursor-pointer ${selectedMetric === 'volume' ? 'text-indigo-500 underline' : 'text-gray-500'}`} onClick={() => changeMetric('volume')}>Volume</span>
+          <span className={`pr-5 cursor-pointer ${selectedMetric === 'uniqueBuyers' ? 'text-indigo-500 underline' : 'text-gray-500'}`} onClick={() => changeMetric('uniqueBuyers')}>Unique Buyers</span>
         </div>
         <div>
           <button className="mr-2 rounded bg-gray-100 px-2 py-1 text-sm text-gray-500">

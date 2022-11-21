@@ -1,61 +1,31 @@
-export const MockDataWeekCol1 = [
-  {
-    timestamp: '2022-11-13',
-    value: 1.1,
-  },
-  {
-    timestamp: '2022-11-14',
-    value: 1.2,
-  },
-  {
-    timestamp: '2022-11-15',
-    value: 1.164,
-  },
-  {
-    timestamp: '2022-11-16',
-    value: 1.3,
-  },
-  {
-    timestamp: '2022-11-17',
-    value: 1.5,
-  },
-  {
-    timestamp: '2022-11-18',
-    value: 1.64523,
-  },
-  {
-    timestamp: '2022-11-19',
-    value: 1.9,
-  },
-]
+const generateAveragePriceMockData = (seconds) => {
+  const days = parseInt(seconds / 86400);
+  const currentDay = parseInt(parseInt(parseInt(Date.now() / 1000) / 86400))
+  const data = []
+  for (let i = 0; i <= days; i++) {
+    data.push({ timestamp: new Date(((currentDay * 86400) - (i * 86400)) * 1000).toDateString(), value: (Math.random() + 1) * .5 * 32 })
+  }
+  return data.reverse()
+}
+const generateVolumeMockData = (seconds) => {
+  const days = parseInt(seconds / 86400);
+  const currentDay = parseInt(parseInt(parseInt(Date.now() / 1000) / 86400))
+  const data = []
+  let total = 19000;
+  for (let i = 0; i <= days; i++) {
+    total = total - ((Math.random() + 1) * .5 * 32)
+    data.push({ timestamp: new Date(((currentDay * 86400) - (i * 86400)) * 1000).toDateString(), value: total })
+  }
+  return data.reverse()
+}
+export const averagePriceMockData = generateAveragePriceMockData(31536000)
+export const averagePriceMockData2 = averagePriceMockData.map(item => ({ ...item, value: item.value * (Math.random() + .2) }))
 
-export const MockDataWeekCol2 = [
-  {
-    timestamp: '2022-11-13',
-    value: 1.5,
-  },
-  {
-    timestamp: '2022-11-14',
-    value: 1.8123,
-  },
-  {
-    timestamp: '2022-11-15',
-    value: 1.432,
-  },
-  {
-    timestamp: '2022-11-16',
-    value: 1.1231,
-  },
-  {
-    timestamp: '2022-11-17',
-    value: 1.1,
-  },
-  {
-    timestamp: '2022-11-18',
-    value: 0.9,
-  },
-  {
-    timestamp: '2022-11-19',
-    value: 0.87,
-  },
-]
+export const volatilityMockData = generateAveragePriceMockData(31536000)
+export const volatilityMockData2 = volatilityMockData.map(item => ({ ...item, value: item.value * (Math.random() + .2) }))
+
+export const volumeMockData = generateVolumeMockData(31536000)
+export const volumeMockData2 = volumeMockData.map(item => ({ ...item, value: item.value * .83 }))
+
+export const uniqueBuyersMockData = generateVolumeMockData(31536000)
+export const uniqueBuyersMockData2 = uniqueBuyersMockData.map(item => ({ ...item, value: item.value * .75 }))

@@ -20,24 +20,22 @@ const HomePage = ({ appName }) => {
               <ul className="space-y-2">
                 <li>
                   <Link
-                    className={`flex items-center rounded-lg p-2 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 ${
-                      appName === 'mintbase.near' || appName === undefined
-                        ? 'bg-gray-700'
-                        : ''
-                    }`}
+                    className={`flex items-center rounded-lg p-2 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 ${appName === 'mintbase.near' || appName === undefined
+                      ? 'bg-gray-700'
+                      : ''
+                      }`}
                     to={routes.app({ appName: 'mintbase.near' })}
                   >
                     <img
                       className="h-6 w-6 rounded-full"
-                      src="https://awesome-near.s3.amazonaws.com/mintbase.jpg"
-                      alt="Mintbase"
+                      src="https://paras-cdn.imgix.net/bafkreid2zne2yfhy43bskanoqk4j5ss5bmxutq32x3crcnfuruw3miei34?w=800&auto=format,compress"
+                      alt="freaky elves"
                     />
                     <span
-                      className={`ml-3 flex-1 whitespace-nowrap hover:text-white ${
-                        appName === 'mintbase.near' || appName === undefined
-                          ? 'text-white'
-                          : 'text-stone-900 '
-                      }`}
+                      className={`ml-3 flex-1 whitespace-nowrap hover:text-white ${appName === 'mintbase.near' || appName === undefined
+                        ? 'text-white'
+                        : 'text-stone-900 '
+                        }`}
                     >
                       Freaky Elves by Spin
                     </span>
@@ -45,24 +43,22 @@ const HomePage = ({ appName }) => {
                 </li>
                 <li>
                   <Link
-                    className={`flex items-center rounded-lg p-2 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 ${
-                      appName === 'mintbase.near' || appName === undefined
-                        ? 'bg-gray-700'
-                        : ''
-                    }`}
+                    className={`flex items-center rounded-lg p-2 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 ${appName === 'mintbase.near' || appName === undefined
+                      ? 'bg-gray-700'
+                      : ''
+                      }`}
                     to={routes.app({ appName: 'mintbase.near' })}
                   >
                     <img
                       className="h-6 w-6 rounded-full"
-                      src="https://awesome-near.s3.amazonaws.com/mintbase.jpg"
-                      alt="Mintbase"
+                      src="https://paras-cdn.imgix.net/bafybeigc6z74rtwmigcoo5eqcsc4gxwkganqs4uq5nuz4dwlhjhrurofeq?w=200&auto=format,compress"
+                      alt="antisocial ape club"
                     />
                     <span
-                      className={`ml-3 flex-1 whitespace-nowrap hover:text-white ${
-                        appName === 'mintbase.near' || appName === undefined
-                          ? 'text-white'
-                          : 'text-stone-900 '
-                      }`}
+                      className={`ml-3 flex-1 whitespace-nowrap hover:text-white ${appName === 'mintbase.near' || appName === undefined
+                        ? 'text-white'
+                        : 'text-stone-900 '
+                        }`}
                     >
                       Antisocial Ape Club
                     </span>

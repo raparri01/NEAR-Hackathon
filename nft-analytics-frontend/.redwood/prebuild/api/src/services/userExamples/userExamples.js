@@ -1,0 +1,19 @@
+import _findInstanceProperty from "@babel/runtime-corejs3/core-js/instance/find";
+const tempUsers = [{
+  id: 1,
+  name: 'priyank',
+  email: 'pulumati.priyank@gmail.com'
+}, {
+  id: 2,
+  name: 'developer',
+  email: 'developer.priyank@gmail.com'
+}];
+export const userExamples = () => {
+  return tempUsers;
+};
+export const userExample = ({
+  id
+}) => {
+  return _findInstanceProperty(tempUsers).call(tempUsers, user => user.id === id) || null;
+};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJ0ZW1wVXNlcnMiLCJpZCIsIm5hbWUiLCJlbWFpbCIsInVzZXJFeGFtcGxlcyIsInVzZXJFeGFtcGxlIiwidXNlciJdLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uLy4uLy4uL2FwaS9zcmMvc2VydmljZXMvdXNlckV4YW1wbGVzL3VzZXJFeGFtcGxlcy5qcyJdLCJzb3VyY2VzQ29udGVudCI6WyJjb25zdCB0ZW1wVXNlcnMgPSBbXG4gIHsgaWQ6IDEsIG5hbWU6ICdwcml5YW5rJywgZW1haWw6ICdwdWx1bWF0aS5wcml5YW5rQGdtYWlsLmNvbScgfSxcbiAgeyBpZDogMiwgbmFtZTogJ2RldmVsb3BlcicsIGVtYWlsOiAnZGV2ZWxvcGVyLnByaXlhbmtAZ21haWwuY29tJyB9LFxuXVxuXG5leHBvcnQgY29uc3QgdXNlckV4YW1wbGVzID0gKCkgPT4ge1xuICByZXR1cm4gdGVtcFVzZXJzXG59XG5cbmV4cG9ydCBjb25zdCB1c2VyRXhhbXBsZSA9ICh7IGlkIH0pID0+IHtcbiAgcmV0dXJuIHRlbXBVc2Vycy5maW5kKCh1c2VyKSA9PiB1c2VyLmlkID09PSBpZCkgfHwgbnVsbFxufVxuIl0sIm1hcHBpbmdzIjoiO0FBQUEsTUFBTUEsU0FBUyxHQUFHLENBQ2hCO0VBQUVDLEVBQUUsRUFBRSxDQUFDO0VBQUVDLElBQUksRUFBRSxTQUFTO0VBQUVDLEtBQUssRUFBRTtBQUE2QixDQUFDLEVBQy9EO0VBQUVGLEVBQUUsRUFBRSxDQUFDO0VBQUVDLElBQUksRUFBRSxXQUFXO0VBQUVDLEtBQUssRUFBRTtBQUE4QixDQUFDLENBQ25FO0FBRUQsT0FBTyxNQUFNQyxZQUFZLEdBQUcsTUFBTTtFQUNoQyxPQUFPSixTQUFTO0FBQ2xCLENBQUM7QUFFRCxPQUFPLE1BQU1LLFdBQVcsR0FBRyxDQUFDO0VBQUVKO0FBQUcsQ0FBQyxLQUFLO0VBQ3JDLE9BQU8sc0JBQUFELFNBQVMsT0FBVEEsU0FBUyxFQUFPTSxJQUFJLElBQUtBLElBQUksQ0FBQ0wsRUFBRSxLQUFLQSxFQUFFLENBQUMsSUFBSSxJQUFJO0FBQ3pELENBQUMifQ==
