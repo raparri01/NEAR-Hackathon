@@ -1,3 +1,10 @@
+# One Labs - NFT data analytics platform for NEAR community 
+
+## Track 
+Native Track ✨
+- Teammates: Veronica Lee, Robert Aparri, Claire Xie
+
+
 ## Inspiration
 The NEAR Protocol is a great platform for NFTs due to its faster speed, lower gas fees, and easier and more efficient execution for user transactions, over Ethereum. These comparative advantages make NEAR attractive for NFT creation/buy/sell transactions and there are several outstanding NFT projects on the NEAR blockchain. NEAR's aforementioned factors would be a great alternative solution for new NFT creators and collectors due to lower costs of entry.
 
